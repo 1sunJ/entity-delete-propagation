@@ -1,0 +1,22 @@
+
+spring:
+  application:
+    name: delete-propagation
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/delete_propagation?serverTimezone=Asia/Seoul # local DB
+    username: root
+    password: 1234
+  jpa:
+    database: mysql
+    database-platform: org.hibernate.dialect.MySQLDialect
+    show-sql: true
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        format_sql:
+    generate-ddl: true
+
+server:
+  port: 9001
